@@ -1,0 +1,67 @@
+<html>
+<head>
+   <title>Proyecto USA</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="http://localhost:8090/js/misFunciones.js"></script>
+   <style>
+   .header { font-size:14px;}
+   .info {font-family: verdana;
+	font-color: blue;
+	font-size: 52px;  }
+
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.parrafo {
+  color: pink;
+  font-family: verdana;
+  font-size: 20px;
+  text-align: right;
+}
+   </style>
+</head>
+<body>
+<h1 class="header">Custome Main Page</h1>
+<p  style="color:red;font-size:15px;">Esto es un párrafo con Style inside</p>
+<p  class="parrafo">Esto es un párrafo con Clase</p>
+<a href="/js/misFunciones.js">Archivo con AJAX</a>
+<br><b>Hora Ultima Actualización<br></b>
+<div id="reloj">
+</div>
+
+<div id="resultado">
+
+</div> 
+<button onclick="traerInformacion()">Consultar</button>
+
+<table >
+
+       <tr>
+	    <td>Id</td>
+        <td>Name</td>
+        <td>Brand</td>
+        <td>Description</td>
+        <td>CategoryId</td>
+        <td>Year</td>
+       </tr>
+       <tr>
+        <td><input type="number" id="id" name="id"></td>
+        <td><input type="text" id="name" name="name"></td>
+        <td><input type="text" id="brand" name="brand"></td>
+        <td><input type="text" id="description" name="description"></td>
+        <td><input type="number" id="categoryId" name="categoryId"></td>
+        <td><input type="number" id="year" name="year"></td>
+       </tr>
+
+</table>
+        <button onclick="adicionarRegistro()">Guardar</button>
+        <button onclick="actualizarRegistro()">Editar</button>
+
+</body>
+</html>

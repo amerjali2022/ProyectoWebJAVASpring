@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Tienda de disfraces</title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width" />
+        <base href="/" />
+        <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+        <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+         Grupo 23 Ciclo 03 2022
+         <div class ="container unauthenticated">
+            Para iniciar la sesión con Github:
+            <a href="/oauth2/authorization/github" >Haz click aqui</a>
+        </div>
+        <div class="container authenticated" style="display:none">
+            Has iniciado sesión como:<span id="user"></span>
+            <p>
+                <button id ="btnNext" onClick="javascript:alert('boton no funciona')">Continuar</button>
+                <br>
+                <button id ="btnLogout" onClick="alerta()">Salir</button>
+                <br>
+                <a href="menu.html">Menú</a>    
+                
+        </div>
+        
+    </body>
+    <script type="text/javascript">
+        function alerta(){
+            alert('boton no funciona, llamando alerta() dentro de funcion');
+            var inicial = 0;
+            for (inicial=0; inicial<10; inicial++){
+                if (inicial%3===0   ){
+                     alert('Valor de inicial es:'+inicial);
+                }
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        
+        $.get("/user",function(data){
+            $("#user").html(data.name);
+            $(".unauthenticated").hide()
+            $(".authenticated").show()
+        });
+    </script>
+</html>

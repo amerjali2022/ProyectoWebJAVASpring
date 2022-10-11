@@ -1,0 +1,44 @@
+<html>
+<head>
+   <title>Proyecto USA</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script  src="/js/misFunciones.js"></script>
+</head>
+<body>
+<h1>Category Main Page</h1>
+<p>Esto es un párrafo</p>
+<a href="js/misFunciones.js">Archivo con AJAX</a>
+<br><b>Hora Ultima Actualización<br></b>
+<div id="reloj">
+</div>
+
+<div id="resultado">
+
+</div> 
+<button onclick="traerInformacion()">Consultar</button>
+
+<table >
+
+       <tr>
+	    <td>Id</td>
+        <td>Name</td>
+        <td>Brand</td>
+        <td>Description</td>
+        <td>CategoryId</td>
+        <td>Year</td>
+       </tr>
+       <tr>
+        <td><input type="number" id="id" name="id"></td>
+        <td><input type="text" id="name" name="name"></td>
+        <td><input type="text" id="brand" name="brand"></td>
+        <td><input type="text" id="description" name="description"></td>
+        <td><input type="number" id="categoryId" name="categoryId"></td>
+        <td><input type="number" id="year" name="year"></td>
+       </tr>
+
+</table>
+        <button onclick="adicionarRegistro()">Guardar</button></td>
+        <button onclick="actualizarRegistro()">Editar</button></td>
+
+</body>
+</html>
